@@ -9,7 +9,7 @@ if(NOT CMAKE_CXX_STANDARD)
     set(CMAKE_CXX_STANDARD 17)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
-
+set(CMAKE_CXX_STANDARD_LIBRARIES -ljpeg)
 # Prevent in source builds
 if(EXISTS "${PROJECT_BINARY_DIR}/CMakeLists.txt")
     message(FATAL_ERROR "Source build detected: please use a subdir. You may remove 'CMakeCache.txt' and 'CMakeFiles'.")

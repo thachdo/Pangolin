@@ -232,7 +232,7 @@ std::vector<std::streampos> GetMJpegOffsets(std::ifstream& is) {
                 // TODO: Is there a better way to truly skip ANY decoding?
 #ifdef LIBJPEG_TURBO_VERSION
                 // bug in libjpeg-turbo prevents us from skipping to end, so skip to end-1
-                jpeg_skip_scanlines(&cinfo, cinfo.output_height-1);
+                //jpeg_skip_scanlines(&cinfo, cinfo.output_height-1);
                 jpeg_read_scanlines(&cinfo, imageBuffer, 1);
 #else
                 for (size_t y = 0; y < cinfo.output_height; y++) {
